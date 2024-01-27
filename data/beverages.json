@@ -1,0 +1,11 @@
+[
+  {
+    "id": 0,
+    "name": "Milk Stout",
+    "price": 13,
+    "description": "Rich and creamy with notes of chocolate and coffee, complemented by a smooth, sweet finish.",
+    "category": "Craft Beer",
+    "image": "tour-1-cover.jpg",
+    "status": "Available"
+  }
+]

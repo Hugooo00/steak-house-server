@@ -1,0 +1,101 @@
+[
+  {
+    "id": 0,
+    "name": "Classic Ribeye Steak",
+    "price": 35,
+    "description": "A juicy ribeye steak seasoned with salt, pepper, and a hint of garlic.",
+    "category": "Steak",
+    "image": "tour-1-cover.jpg",
+    "status": "Available"
+  },
+  {
+    "id": 1,
+    "name": "New York Steak",
+    "price": 56,
+    "description": "Tender New York strip steak with a rich, beefy flavor, grilled to perfection.",
+    "category": "Steak",
+    "image": "tour-1-cover.jpg",
+    "status": "Available"
+  },
+  {
+    "id": 2,
+    "name": "Filet Mignon",
+    "price": 68,
+    "description": "Succulent filet mignon, known for its tenderness and delicate texture.",
+    "category": "Steak",
+    "image": "tour-1-cover.jpg",
+    "status": "Sold out"
+  },
+  {
+    "id": 3,
+    "name": "T-Bone Steak",
+    "price": 70,
+    "description": "A classic T-bone steak combining the rich taste of a strip with the tenderness of a filet.",
+    "category": "Steak",
+    "image": "tour-1-cover.jpg",
+    "status": "Available"
+  },
+  {
+    "id": 4,
+    "name": "Caesar Salad",
+    "price": 23,
+    "description": "Crisp romaine lettuce with creamy Caesar dressing, croutons, and Parmesan cheese.",
+    "category": "Appetizers",
+    "image": "tour-1-cover.jpg",
+    "status": "Available"
+  },
+  {
+    "id": 5,
+    "name": "Chicken Wings",
+    "price": 22,
+    "description": "Crispy chicken wings with a choice of sauces.",
+    "category": "Appetizers",
+    "image": "tour-1-cover.jpg",
+    "status": "Available"
+  },
+  {
+    "id": 6,
+    "name": "Grilled Salmon",
+    "price": 38,
+    "description": "Fresh salmon fillet grilled with lemon and herbs.",
+    "category": "Main",
+    "image": "tour-1-cover.jpg",
+    "status": "Available"
+  },
+  {
+    "id": 7,
+    "name": "Lamb Chops",
+    "price": 46,
+    "description": "Tender lamb chops with a rosemary and garlic marinade.",
+    "category": "Main",
+    "image": "tour-1-cover.jpg",
+    "status": "sold out"
+  },
+  {
+    "id": 8,
+    "name": "Chocolate Lava Cake",
+    "price": 38,
+    "description": "Warm chocolate cake with a gooey center, served with vanilla ice cream.",
+    "category": "Dessert",
+    "image": "tour-1-cover.jpg",
+    "status": "Available"
+  },
+  {
+    "id": 9,
+    "name": "Mini Cheeseburgers",
+    "price": 25,
+    "description": "Kid-sized burgers with cheese on a small bun.",
+    "category": "Kids",
+    "image": "tour-1-cover.jpg",
+    "status": "Available"
+  },
+  {
+    "id": 10,
+    "name": "Milk Stout",
+    "price": 13,
+    "description": "Rich and creamy with notes of chocolate and coffee, complemented by a smooth, sweet finish.",
+    "category": "Craft Beer",
+    "image": "tour-1-cover.jpg",
+    "status": "Available"
+  }
+]
