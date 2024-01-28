@@ -1,22 +1,50 @@
-// const fs = require('fs');
 const Menu = require('../model/menuModel');
 
-// const menu = JSON.parse(fs.readFileSync(`${__dirname}/../data/menu.json`));
-
-// exports.checkID = (req, res, next, val) => {
-//   const queryId = req.params.id * 1;
-//   if (queryId > Menu.length) {
-//     return res.status(404).json({
-//       status: 'fail',
-//       message: 'Invaild ID',
-//     });
-//   }
-//   next();
-// };
+// Top3 Popular Steak filtering middleWare
+exports.aliasTopSteak = (req, res, next) => {
+  req.query.limit = '3';
+  req.query.sort = '-ratingsAverage,-price';
+  req.query.fields = 'name,price,ratingsAverage,description,image,category';
+  req.query.category = 'Steak';
+  next();
+};
 
 exports.getAllMenu = async (req, res) => {
   try {
-    const menu = await Menu.find();
+    // Filtering the exculde fields
+    const queryObject = { ...req.query };
+    const exculdeFields = ['sort', 'limit', 'fields', 'page'];
+    exculdeFields.forEach((el) => {
+      delete queryObject[el];
+    });
+
+    // Filter the gte|gt|lte|lt , so can achieve like '>' operator in query
+    let queryObj = JSON.stringify(queryObject);
+    queryObj = queryObj.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
+    let query = Menu.find(JSON.parse(queryObj));
+
+    // Sorting by fields
+    if (req.query.sort) {
+      const sortedBy = req.query.sort.split(',').join(' ');
+      query = query.sort(sortedBy);
+    } else {
+      query = query.sort('-createdAt'); // default
+    }
+
+    // Field selected limiting
+    if (req.query.fields) {
+      const fieldSelected = req.query.fields.split(',').join(' ');
+      query = query.select(fieldSelected);
+    }
+
+    // Limit the number of query results
+    if (req.query.limit) {
+      const limit = req.query.limit * 1;
+      query = query.limit(limit);
+    }
+
+    const menu = await query;
+
     res.status(200).json({
       status: 'success',
       requestedAt: req.reqTime,
