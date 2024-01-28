@@ -74,6 +74,33 @@ exports.getMenuItem = async (req, res) => {
   }
 };
 
+exports.getMenuStats = async (req, res) => {
+  try {
+    const stats = await Menu.aggregate([
+      {
+        $group: {
+          _id: '$category',
+          numMenu: { $sum: 1 },
+          // numRatings: { $sum: '$ratingsQuantity' },
+          avgRatings: { $avg: '$ratingsAverage' },
+          avgPrice: { $avg: '$price' },
+          minPrice: { $min: '$price' },
+          maxPrice: { $max: '$price' },
+        },
+      },
+    ]);
+    res.status(200).json({
+      status: 'success',
+      data: { stats },
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: 'fail',
+      message: err,
+    });
+  }
+};
+
 exports.createMenu = async (req, res) => {
   try {
     const newMenuItem = await Menu.create(req.body);
