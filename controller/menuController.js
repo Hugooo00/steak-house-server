@@ -1,4 +1,5 @@
 const Menu = require('../model/menuModel');
+const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
 // Top3 Popular Steak filtering middleWare
 exports.aliasTopSteak = (req, res, next) => {
@@ -52,8 +53,13 @@ exports.getAllMenu = catchAsync(async (req, res) => {
   });
 });
 
-exports.getMenuItem = catchAsync(async (req, res) => {
+exports.getMenuItem = catchAsync(async (req, res, next) => {
   const menuItem = await Menu.findById(req.params.id);
+  if (!menuItem) {
+    return next(
+      new AppError('Unable to find a menu item with the provided ID', 404),
+    );
+  }
   res.status(200).json({
     status: 'success',
     data: { menuItem },
@@ -84,7 +90,7 @@ exports.createMenu = catchAsync(async (req, res) => {
   const newMenuItem = await Menu.create(req.body);
   res.status(201).json({
     status: 'success',
-    data: { tour: newMenuItem },
+    data: { menu: newMenuItem },
   });
 });
 

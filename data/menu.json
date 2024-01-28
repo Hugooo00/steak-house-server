@@ -5,7 +5,7 @@
     "price": 35,
     "description": "A juicy ribeye steak seasoned with salt, pepper, and a hint of garlic.",
     "category": "Steak",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-1.jpg",
     "status": "Available"
   },
   {
@@ -14,7 +14,7 @@
     "price": 56,
     "description": "Tender New York strip steak with a rich, beefy flavor, grilled to perfection.",
     "category": "Steak",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-2.jpg",
     "status": "Available"
   },
   {
@@ -23,7 +23,7 @@
     "price": 68,
     "description": "Succulent filet mignon, known for its tenderness and delicate texture.",
     "category": "Steak",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-3.jpg",
     "status": "Sold out"
   },
   {
@@ -32,7 +32,7 @@
     "price": 70,
     "description": "A classic T-bone steak combining the rich taste of a strip with the tenderness of a filet.",
     "category": "Steak",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-4.jpg",
     "status": "Available"
   },
   {
@@ -41,7 +41,7 @@
     "price": 23,
     "description": "Crisp romaine lettuce with creamy Caesar dressing, croutons, and Parmesan cheese.",
     "category": "Appetizers",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-5.jpg",
     "status": "Available"
   },
   {
@@ -50,7 +50,7 @@
     "price": 22,
     "description": "Crispy chicken wings with a choice of sauces.",
     "category": "Appetizers",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-6.jpg",
     "status": "Available"
   },
   {
@@ -59,7 +59,7 @@
     "price": 38,
     "description": "Fresh salmon fillet grilled with lemon and herbs.",
     "category": "Main",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-7.jpg",
     "status": "Available"
   },
   {
@@ -68,7 +68,7 @@
     "price": 46,
     "description": "Tender lamb chops with a rosemary and garlic marinade.",
     "category": "Main",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-8.jpg",
     "status": "sold out"
   },
   {
@@ -77,7 +77,7 @@
     "price": 38,
     "description": "Warm chocolate cake with a gooey center, served with vanilla ice cream.",
     "category": "Dessert",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-9.jpg",
     "status": "Available"
   },
   {
@@ -86,7 +86,7 @@
     "price": 25,
     "description": "Kid-sized burgers with cheese on a small bun.",
     "category": "Kids",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-10.jpg",
     "status": "Available"
   },
   {
@@ -95,7 +95,7 @@
     "price": 13,
     "description": "Rich and creamy with notes of chocolate and coffee, complemented by a smooth, sweet finish.",
     "category": "Craft Beer",
-    "image": "tour-1-cover.jpg",
+    "image": "menu-11.jpg",
     "status": "Available"
   }
 ]
