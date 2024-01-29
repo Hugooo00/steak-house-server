@@ -16,6 +16,10 @@ router
   .route('/:id')
   .get(menuController.getMenuItem)
   .patch(menuController.updateMenu)
-  .delete(menuController.deleteMenu);
+  .delete(
+    authController.routeProtect,
+    authController.restrictTo('admin'),
+    menuController.deleteMenu,
+  );
 
 module.exports = router;
