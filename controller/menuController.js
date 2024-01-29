@@ -42,7 +42,6 @@ exports.getAllMenu = catchAsync(async (req, res) => {
     const limit = req.query.limit * 1;
     query = query.limit(limit);
   }
-
   const menu = await query;
 
   res.status(200).json({
@@ -87,6 +86,7 @@ exports.getMenuStats = catchAsync(async (req, res) => {
 });
 
 exports.createMenu = catchAsync(async (req, res) => {
+  console.log(req.headers);
   const newMenuItem = await Menu.create(req.body);
   res.status(201).json({
     status: 'success',

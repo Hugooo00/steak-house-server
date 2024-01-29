@@ -41,11 +41,18 @@ const handleCastError = (err) => {
 
 // Handle validatior error
 const handleValidatorError = (err) => {
-  //   const message = `Invalid input data. ${err.message}`;
   const errMessage = Object.values(err.errors).map((el) => el.message);
   const message = `Invalid input data. ${errMessage.join('. ')}`;
   return new AppError(message, 400);
 };
+
+// Handle JsonWebTokenError
+const handleJsonWebTokenError = () =>
+  new AppError('Invalid token. Please login again!', 401);
+
+// Handle TokenExpiredError
+const handleTokenExpiredError = () =>
+  new AppError('Your token has expired! Please login again', 401);
 
 // Global Error Handling Middleware
 module.exports = (err, req, res, next) => {
@@ -64,6 +71,12 @@ module.exports = (err, req, res, next) => {
     }
     if (err.name === 'ValidationError') {
       err = handleValidatorError(err);
+    }
+    if (err.name === 'JsonWebTokenError') {
+      err = handleJsonWebTokenError();
+    }
+    if (err.name === 'TokenExpiredError') {
+      err = handleTokenExpiredError();
     }
     errorForProd(err, res);
   }

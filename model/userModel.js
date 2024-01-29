@@ -28,6 +28,7 @@ const userSchema = new mongoose.Schema({
   },
   photo: String,
   role: { type: String, enum: ['admin', 'user', 'staff'], default: 'user' },
+  passwordChangeAt: { type: Date, default: Date.now },
 });
 
 // Encrypt password before saving the database
@@ -38,12 +39,26 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-// Method: Compares a input password with the user's stored password.
+// Method: Compares the input password with the user's stored password.
 userSchema.methods.comparePassword = async function (
   inputPassword,
   userPassword,
 ) {
   return await bcrypt.compare(inputPassword, userPassword);
+};
+
+// Method: Check if user changed password after token was issued
+userSchema.methods.checkPasswordChangeAfterToken = function (JWTIssuedAt) {
+  if (this.passwordChangeAt) {
+    const changedPasswordAt = parseInt(
+      this.passwordChangeAt.getTime() / 1000,
+      10,
+    );
+    console.log(changedPasswordAt, JWTIssuedAt);
+
+    return JWTIssuedAt < changedPasswordAt;
+  }
+  return false;
 };
 
 const User = mongoose.model('User', userSchema);
