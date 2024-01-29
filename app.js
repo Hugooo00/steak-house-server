@@ -1,9 +1,11 @@
 const express = require('express');
 const morgan = require('morgan');
+
 const AppError = require('./utils/appError');
 const globalErrorHandle = require('./controller/errorController');
 
 const menuRouter = require('./routes/menuRoutes');
+const userRouter = require('./routes/userRoutes');
 
 const app = express();
 app.use(express.json());
@@ -20,6 +22,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/api/menu', menuRouter);
+app.use('/api/user', userRouter);
 
 // Handling unhandled routes
 app.all('*', (req, res, next) => {

@@ -55,6 +55,6 @@ menuSchema.pre('save', function (next) {
   next();
 });
 
-const Menu = mongoose.model('menu', menuSchema);
+const Menu = mongoose.model('Menu', menuSchema);
 
 module.exports = Menu;
