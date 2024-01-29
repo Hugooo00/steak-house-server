@@ -38,5 +38,13 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
+// Method: Compares a input password with the user's stored password.
+userSchema.methods.comparePassword = async function (
+  inputPassword,
+  userPassword,
+) {
+  return await bcrypt.compare(inputPassword, userPassword);
+};
+
 const User = mongoose.model('User', userSchema);
 module.exports = User;
