@@ -1,8 +1,15 @@
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const app = require('./app');
+
+// Listen and handle Uncaught Exception
+process.on('uncaughtException', (err) => {
+  console.log(err.name, err.message);
+  console.log('💥 Uncaught Exception!');
+  process.exit(1);
+});
 
 dotenv.config({ path: './.env' });
+const app = require('./app');
 
 const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
@@ -15,6 +22,15 @@ mongoose.connect(DB).then(() => {
 });
 
 const port = process.env.PORT;
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`The APP is running on port ${port}`);
+});
+
+// Listen and handle unhandledRejection event
+process.on('unhandledRejection', (err) => {
+  console.log(err.name, err.message);
+  console.log('💥 Unhandle Rejection! ');
+  server.close(() => {
+    process.exit(1);
+  });
 });
