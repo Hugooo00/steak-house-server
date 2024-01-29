@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
+const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: [true, 'Please tell us your name!'] },
@@ -18,11 +19,24 @@ const userSchema = new mongoose.Schema({
   passwordConfirm: {
     type: String,
     required: [true, 'Please confirm your password!'],
+    validate: {
+      validator: function (el) {
+        return el === this.password;
+      },
+      message: 'Password confirmation does not match the password!',
+    },
   },
   photo: String,
   role: { type: String, enum: ['admin', 'user', 'staff'], default: 'user' },
 });
 
-const User = mongoose.model('User', userSchema);
+// Encrypt password before saving the database
+userSchema.pre('save', async function (next) {
+  if (!this.isModified('password')) return next();
+  this.password = await bcrypt.hash(this.password, 12);
+  this.passwordConfirm = undefined;
+  next();
+});
 
+const User = mongoose.model('User', userSchema);
 module.exports = User;
