@@ -4,6 +4,7 @@ const User = require('../model/userModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const sendEmail = require('../utils/email');
+const crypto = require('crypto');
 
 const signToken = (id) =>
   jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -130,7 +131,7 @@ exports.forgetPasswordAndSendEmail = catchAsync(async (req, res, next) => {
   const resetURL = `${req.protocol}://${req.get(
     'host',
   )}/api/v1/users/resetPassword/${resetToken}`;
-  const message = `Dear user,\n\nIt appears that you have requested a password reset. To proceed, please submit a PATCH request with your new password and password confirmation to the following URL: ${resetURL}.\n\nIf you did not initiate this request, please disregard this message for your security. No changes have been made to your account.\n\nBest regards,\nYour SteakHouse Co. Team`;
+  const message = `Dear ${user.name},\n\nIt appears that you have requested a password reset. To proceed, please submit a PATCH request with your new password and password confirmation to the following URL: ${resetURL}.\n\nIf you did not initiate this request, please disregard this message for your security. No changes have been made to your account.\n\nBest regards,\nYour SteakHouse Co. Team`;
   // console.log(message);
   try {
     await sendEmail({
@@ -155,4 +156,34 @@ exports.forgetPasswordAndSendEmail = catchAsync(async (req, res, next) => {
       ),
     );
   }
+});
+
+// Reset Password
+exports.resetPassword = catchAsync(async (req, res, next) => {
+  const hashedToken = crypto
+    .createHash('sha256')
+    .update(req.params.token)
+    .digest('hex');
+
+  const user = await User.findOne({
+    passwordResetToken: hashedToken,
+    passwordResetExpires: { $gt: Date.now() },
+  });
+
+  // If token has not expired, and there is user, set the new password
+  if (!user) {
+    return next(new AppError('Token is invalid or has expired', 400));
+  }
+  user.password = req.body.password;
+  user.passwordConfirm = req.body.passwordConfirm;
+  user.passwordResetToken = undefined;
+  user.passwordResetExpires = undefined;
+  await user.save();
+
+  // Log the user in, send JWT
+  const token = signToken(user._id);
+  res.status(200).json({
+    status: 'success',
+    token,
+  });
 });
