@@ -20,16 +20,20 @@ exports.updateUserData = catchAsync(async (req, res, next) => {
       ),
     );
   }
-  const filteredBody = filterObj(req.body, 'name', 'email');
-  const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
-    new: true,
-    runValidators: true,
-  });
+  const filteredObj = filterObj(req.body, 'name', 'email');
+  const updatedUserData = await User.findByIdAndUpdate(
+    req.user.id,
+    filteredObj,
+    {
+      new: true,
+      runValidators: true,
+    },
+  );
 
   res.status(200).json({
     status: 'success',
     data: {
-      user: updatedUser,
+      user: updatedUserData,
     },
   });
 });
