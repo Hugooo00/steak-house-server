@@ -32,6 +32,11 @@ const userSchema = new mongoose.Schema({
   passwordChangeAt: { type: Date, default: Date.now },
   passwordResetToken: String,
   passwordResetExpires: Date,
+  activeState: {
+    type: Boolean,
+    default: true,
+    select: false,
+  },
 });
 
 // Encrypt password before saving the database
@@ -48,6 +53,12 @@ userSchema.pre('save', function (next) {
     return next();
   }
   this.passwordChangeAt = Date.now() - 1000;
+  next();
+});
+
+// When activeState field of user is false, don't show this user
+userSchema.pre(/^find/, function (next) {
+  this.find({ activeState: { $ne: false } });
   next();
 });
 
