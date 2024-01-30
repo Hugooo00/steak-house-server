@@ -11,44 +11,6 @@ const filterObj = (obj, ...allowedFields) => {
   return newObj;
 };
 
-exports.getAllUsers = catchAsync(async (req, res) => {
-  const users = await User.find();
-  res.status(200).json({
-    status: 'success',
-    data: {
-      users,
-    },
-  });
-});
-
-exports.getOneUser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'This route is not yet defined ',
-  });
-};
-
-exports.createUser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'This route is not yet defined ',
-  });
-};
-
-exports.updateUser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'This route is not yet defined ',
-  });
-};
-
-exports.deleteUser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'This route is not yet defined ',
-  });
-};
-
 exports.updateUserData = catchAsync(async (req, res, next) => {
   if (req.body.password || req.body.passwordConfirm) {
     return next(
@@ -75,6 +37,67 @@ exports.updateUserData = catchAsync(async (req, res, next) => {
 exports.setAccountActiveState = catchAsync(async (req, res, next) => {
   await User.findByIdAndUpdate(req.user.id, { activeState: false });
 
+  res.status(204).json({
+    status: 'success',
+    data: null,
+  });
+});
+
+exports.getAllUsers = catchAsync(async (req, res) => {
+  const users = await User.find();
+  res.status(200).json({
+    status: 'success',
+    data: {
+      users,
+    },
+  });
+});
+
+exports.getOneUser = catchAsync(async (req, res, next) => {
+  const user = await User.findById(req.params.id);
+  if (!user) {
+    return next(
+      new AppError('Unable to find the user with the provided ID', 404),
+    );
+  }
+  res.status(200).json({
+    status: 'success',
+    data: {
+      user,
+    },
+  });
+});
+
+exports.createUser = (req, res) => {
+  res.status(500).json({
+    status: 'error',
+    message: 'This route is not yet defined! Please use /signup instead ',
+  });
+};
+
+exports.updateUser = catchAsync(async (req, res, next) => {
+  const newUser = await User.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
+  if (!newUser) {
+    return next(new AppError('No user found with that ID', 404));
+  }
+
+  res.status(200).json({
+    status: 'success',
+    data: {
+      newUser,
+    },
+  });
+});
+
+exports.deleteUser = catchAsync(async (req, res, next) => {
+  const deleteUser = await User.findByIdAndDelete(req.params.id);
+
+  if (!deleteUser) {
+    return next(new AppError('No user found with that ID', 404));
+  }
   res.status(204).json({
     status: 'success',
     data: null,
