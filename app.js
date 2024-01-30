@@ -3,7 +3,9 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
-const xss = require('xss');
+// const xss = require('xss');
+const xss = require('xss-clean');
+
 const hpp = require('hpp');
 
 const AppError = require('./utils/appError');
@@ -11,6 +13,7 @@ const globalErrorHandle = require('./controller/errorController');
 
 const menuRouter = require('./routes/menuRoutes');
 const userRouter = require('./routes/userRoutes');
+const reviewRouter = require('./routes/reviewRoutes');
 
 const app = express();
 app.use(express.json());
@@ -62,6 +65,7 @@ app.use((req, res, next) => {
 // 3) Routes
 app.use('/api/menu', menuRouter);
 app.use('/api/user', userRouter);
+app.use('/api/review', reviewRouter);
 
 // 4) Error Handling middleware
 // Handling unhandled routes

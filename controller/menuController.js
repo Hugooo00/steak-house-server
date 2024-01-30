@@ -53,7 +53,7 @@ exports.getAllMenu = catchAsync(async (req, res) => {
 });
 
 exports.getMenuItem = catchAsync(async (req, res, next) => {
-  const menuItem = await Menu.findById(req.params.id);
+  const menuItem = await Menu.findById(req.params.id).populate('reviews');
   if (!menuItem) {
     return next(
       new AppError('Unable to find a menu item with the provided ID', 404),
