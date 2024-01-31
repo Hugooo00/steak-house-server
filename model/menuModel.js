@@ -49,6 +49,7 @@ const menuSchema = mongoose.Schema(
       default: 8.5,
       min: [1, 'Rating must be above 1.0'],
       max: [10, 'Rating must be below 10.0'],
+      set: (val) => Math.round(val * 10) / 10,
     },
     ratingsQuantity: { type: Number, default: 0 },
     createdAt: {
@@ -64,14 +65,14 @@ const menuSchema = mongoose.Schema(
   },
 );
 
-// Virtual populate: reviews field
+// Virtual populate: Add virtual "reviews" field (invisible in database)
 menuSchema.virtual('reviews', {
   ref: 'Review',
   foreignField: 'menuItem',
   localField: '_id',
 });
 
-// Optimize query
+// Using index to Optimize query
 menuSchema.index({ price: 1, ratingsAverage: -1 });
 menuSchema.index({ category: 1, price: 1 });
 menuSchema.index({ slug: 1 });

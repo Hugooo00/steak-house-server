@@ -104,7 +104,5 @@ exports.updateMenu = catchAsync(async (req, res) => {
 
 exports.deleteMenu = catchAsync(async (req, res) => {
   await Menu.findByIdAndDelete(req.params.id);
-  res
-    .status(204) // 204 means no content
-    .json({ status: 'success', Menu: null }); // data send back is null}
+  res.status(204).json({ status: 'success', Menu: null });
 });
