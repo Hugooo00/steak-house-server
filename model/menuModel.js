@@ -71,6 +71,14 @@ menuSchema.virtual('reviews', {
   localField: '_id',
 });
 
+// Optimize query
+menuSchema.index({ price: 1, ratingsAverage: -1 });
+menuSchema.index({ category: 1, price: 1 });
+menuSchema.index({ slug: 1 });
+menuSchema.index({ status: 1 });
+menuSchema.index({ ratingsQuantity: 1 });
+
+// Document middleware: Generate slug field based on the current name
 menuSchema.pre('save', function (next) {
   this.slug = slugify(this.name, { lower: true });
   next();
