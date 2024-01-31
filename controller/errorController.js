@@ -28,9 +28,23 @@ const errorForProd = (err, res) => {
 };
 
 // Handle duplicate field (e.g. diplicate name)
-const handleDuplicateName = (err) => {
-  const messasge = `Duplicate field value: ${err.keyValue.name}. Please use another value`;
-  return new AppError(messasge, 400);
+const handleDuplicateKeyError = (err) => {
+  if (err.keyValue.name) {
+    const messasge = `Duplicate name: ${err.keyValue.name}. Please use another name`;
+    return new AppError(messasge, 400);
+  }
+  if (err.keyValue.email) {
+    const messasge = `Duplicate email: ${err.keyValue.email}. Please use another email`;
+    return new AppError(messasge, 400);
+  }
+  if (err.keyValue.menuItem) {
+    const messasge =
+      'Review already submitted for this food (Only one review allowed per food item !)';
+    return new AppError(messasge, 400);
+  }
+  // const value = err.keyValue.name || err.keyValue.menuItem;
+  // const messasge = `Duplicate field value: ${value}. Please use another value`;
+  // return new AppError(messasge, 400);
 };
 
 // Handle cast error (e.g. invalid database ID)
@@ -64,7 +78,7 @@ module.exports = (err, req, res, next) => {
     errorForDev(err, res);
   } else if (process.env.NODE_ENV === 'production') {
     if (err.code === 11000) {
-      err = handleDuplicateName(err);
+      err = handleDuplicateKeyError(err);
     }
     if (err.name === 'CastError') {
       err = handleCastError(err);
