@@ -30,15 +30,19 @@ const menuSchema = mongoose.Schema(
       type: String,
       required: [true, 'A menu item must have a category'],
       enum: {
-        values: ['Steak', 'Appetizers', 'Main', 'Kids', 'Craft Beer'],
+        values: ['Steak', 'Snacks', 'Main', 'Kids', 'Sweet', 'Craft Beer'],
         message:
-          'Category is either Steak, Appetizers, Main, Kids and Craft Beer',
+          'Category is either Steak, Snacks, Main, Sweet, Kids and Craft Beer',
       },
     },
     image: { type: String },
     status: {
       type: String,
       required: [true, 'A menu item must have a status'],
+      enum: {
+        values: ['Available', 'Sold out'],
+        message: 'Status is either Available and Sold out',
+      },
     },
     ratingsAverage: {
       type: Number,

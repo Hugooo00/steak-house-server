@@ -1,0 +1,11 @@
+[
+  {
+    "id": "xxxx",
+    "name": "Mike",
+    "email": "mike@qq.com",
+    "role": "admin",
+    "activeState": true,
+    "photo": "xxx.jpg",
+    "password": "xxxx"
+  }
+]

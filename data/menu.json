@@ -1,101 +1,274 @@
 [
   {
-    "id": 0,
     "name": "Classic Ribeye Steak",
     "price": 35,
+    "discount": 5,
+    "ratingsAverage": 9,
     "description": "A juicy ribeye steak seasoned with salt, pepper, and a hint of garlic.",
     "category": "Steak",
-    "image": "menu-1.jpg",
+    "image": "steak-1.jpg",
     "status": "Available"
   },
   {
-    "id": 1,
     "name": "New York Steak",
-    "price": 56,
+    "price": 55,
+    "discount": 5,
+    "ratingsAverage": 9.5,
     "description": "Tender New York strip steak with a rich, beefy flavor, grilled to perfection.",
     "category": "Steak",
-    "image": "menu-2.jpg",
+    "image": "steak-2.jpg",
     "status": "Available"
   },
   {
-    "id": 2,
     "name": "Filet Mignon",
-    "price": 68,
+    "price": 60,
+    "discount": 5,
+    "ratingsAverage": 9.5,
     "description": "Succulent filet mignon, known for its tenderness and delicate texture.",
     "category": "Steak",
-    "image": "menu-3.jpg",
+    "image": "steak-3.jpg",
     "status": "Sold out"
   },
   {
-    "id": 3,
     "name": "T-Bone Steak",
     "price": 70,
     "description": "A classic T-bone steak combining the rich taste of a strip with the tenderness of a filet.",
     "category": "Steak",
-    "image": "menu-4.jpg",
+    "image": "steak-4.jpg",
     "status": "Available"
   },
   {
-    "id": 4,
+    "name": "Sirloin Steak",
+    "price": 30,
+    "description": "Lean and flavorful sirloin steak, best served medium-rare.",
+    "category": "Steak",
+    "image": "steak-5.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Porterhouse Steak",
+    "price": 80,
+    "description": "A larger version of the T-bone, with more of the tender filet.",
+    "category": "Steak",
+    "image": "steak-6.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Tomahawk Steak",
+    "price": 110,
+    "description": "A long-bone ribeye steak, rich in flavor and perfect for grilling.",
+    "category": "Steak",
+    "image": "steak-7.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Beef Wellington",
+    "price": 100,
+    "description": "A savory preparation of tenderloin encased in puff pastry with mushroom duxelles.",
+    "category": "Steak",
+    "image": "steak-8.jpg",
+    "status": "Available"
+  },
+  {
     "name": "Caesar Salad",
     "price": 23,
     "description": "Crisp romaine lettuce with creamy Caesar dressing, croutons, and Parmesan cheese.",
-    "category": "Appetizers",
-    "image": "menu-5.jpg",
+    "category": "Snacks",
+    "image": "snack-1.jpg",
     "status": "Available"
   },
   {
-    "id": 5,
+    "name": "Caprese Salad",
+    "price": 23,
+    "description": "Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.",
+    "category": "Snacks",
+    "image": "snack-2.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Bruschetta",
+    "price": 15,
+    "description": "Toasted bread topped with fresh tomatoes, basil, garlic, and olive oil.",
+    "category": "Snacks",
+    "image": "snack-3.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Garlic Bread",
+    "price": 13,
+    "description": "Crispy bread with buttery garlic spread.",
+    "category": "Snacks",
+    "image": "snack-4.jpg",
+    "status": "Available"
+  },
+  {
     "name": "Chicken Wings",
     "price": 22,
     "description": "Crispy chicken wings with a choice of sauces.",
-    "category": "Appetizers",
-    "image": "menu-6.jpg",
+    "category": "Snacks",
+    "image": "snack-5.jpg",
     "status": "Available"
   },
   {
-    "id": 6,
+    "name": "Cheese Platter",
+    "price": 22,
+    "description": "An assortment of fine cheeses served with crackers.",
+    "category": "Snacks",
+    "image": "snack-6.jpg",
+    "status": "Available"
+  },
+  {
     "name": "Grilled Salmon",
     "price": 38,
     "description": "Fresh salmon fillet grilled with lemon and herbs.",
     "category": "Main",
-    "image": "menu-7.jpg",
+    "image": "main-1.jpg",
     "status": "Available"
   },
   {
-    "id": 7,
     "name": "Lamb Chops",
     "price": 46,
+    "discount": 6,
     "description": "Tender lamb chops with a rosemary and garlic marinade.",
     "category": "Main",
-    "image": "menu-8.jpg",
-    "status": "sold out"
+    "image": "main-2.jpg",
+    "status": "Sold out"
   },
   {
-    "id": 8,
-    "name": "Chocolate Lava Cake",
-    "price": 38,
-    "description": "Warm chocolate cake with a gooey center, served with vanilla ice cream.",
-    "category": "Dessert",
-    "image": "menu-9.jpg",
+    "name": "Chicken Alfredo Pasta",
+    "price": 27,
+    "description": "Creamy Alfredo sauce over fettuccine with grilled chicken.",
+    "category": "Main",
+    "image": "main-3.jpg",
     "status": "Available"
   },
   {
-    "id": 9,
+    "name": "Lobster Risotto",
+    "price": 38,
+    "description": "Creamy risotto with succulent pieces of lobster.",
+    "category": "Main",
+    "image": "main-4.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Seafood Paella",
+    "price": 35,
+    "description": "Traditional Spanish rice dish with a variety of seafood.",
+    "category": "Main",
+    "image": "main-5.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "price": 22,
+    "discount": 3,
+    "description": "Warm chocolate cake with a gooey center, served with vanilla ice cream.",
+    "category": "Sweet",
+    "image": "sweet-1.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Tiramisu",
+    "price": 23,
+    "description": "Coffee-flavored Italian dessert with layers of ladyfingers and mascarpone cheese.",
+    "category": "Sweet",
+    "image": "sweet-2.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Cheesecake",
+    "price": 20,
+    "description": "Creamy cheesecake with a graham cracker crust, topped with fresh berries.",
+    "category": "Sweet",
+    "image": "sweet-3.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Apple Pie",
+    "price": 32,
+    "description": "Traditional apple pie with a flaky crust, served warm.",
+    "category": "Sweet",
+    "image": "sweet-4.jpg",
+    "status": "Available"
+  },
+  {
     "name": "Mini Cheeseburgers",
-    "price": 25,
+    "price": 15,
     "description": "Kid-sized burgers with cheese on a small bun.",
     "category": "Kids",
-    "image": "menu-10.jpg",
+    "image": "kid-1.jpg",
     "status": "Available"
   },
   {
-    "id": 10,
-    "name": "Milk Stout",
+    "name": "Chicken Tenders",
     "price": 13,
+    "description": "Crispy chicken tenders served with dipping sauces.",
+    "category": "Kids",
+    "image": "kid-2.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Fish & Chips",
+    "price": 14,
+    "description": "Golden-battered fish paired with classic, thick-cut fries, served with tartar sauce.",
+    "category": "Kids",
+    "image": "kid-3.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Milk Stout",
+    "price": 16,
     "description": "Rich and creamy with notes of chocolate and coffee, complemented by a smooth, sweet finish.",
     "category": "Craft Beer",
-    "image": "menu-11.jpg",
+    "image": "craftBeer-1.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Hoppy IPA",
+    "price": 13,
+    "description": "A bold, hoppy IPA with citrus and pine aromas, offering a crisp and refreshing bitterness.",
+    "category": "Craft Beer",
+    "image": "craftBeer-2.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Amber Ale",
+    "price": 12,
+    "description": "Smooth and malty with a balanced caramel sweetness and a hint of roasted flavor.",
+    "category": "Craft Beer",
+    "image": "craftBeer-3.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Sour Cherry Ale",
+    "price": 14,
+    "description": "Tart and fruity, this ale offers a vibrant cherry flavor with a pleasantly sour finish.",
+    "category": "Craft Beer",
+    "image": "craftBeer-4.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Dark Porter",
+    "price": 15,
+    "description": "Rich in dark chocolate and roasted coffee notes, this porter is both robust and smooth.",
+    "category": "Craft Beer",
+    "image": "craftBeer-5.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Golden Lager",
+    "price": 12,
+    "description": "Bright and clean with a golden hue, offering a smooth, balanced malt flavor.",
+    "category": "Craft Beer",
+    "image": "craftBeer-6.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Crisp Pilsner",
+    "price": 12,
+    "description": "A classic Pilsner with a refreshing, crisp profile, balanced by light hop bitterness.",
+    "category": "Craft Beer",
+    "image": "craftBeer-7.jpg",
     "status": "Available"
   }
 ]
