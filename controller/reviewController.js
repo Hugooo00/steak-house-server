@@ -1,4 +1,5 @@
 const Review = require('../model/reviewModel');
+const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
 
 exports.getAllReviews = catchAsync(async (req, res, next) => {
@@ -25,5 +26,51 @@ exports.createReview = catchAsync(async (req, res, next) => {
     data: {
       newReview,
     },
+  });
+});
+
+exports.getOnereview = catchAsync(async (req, res, next) => {
+  const review = await Review.findById(req.params.id);
+
+  if (!review) {
+    return next(new AppError('No user found with that ID', 404));
+  }
+  res.status(201).json({
+    status: 'success',
+    data: {
+      review,
+    },
+  });
+});
+
+exports.updateReview = catchAsync(async (req, res, next) => {
+  const updatedReview = await Review.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {
+      new: true,
+      runValidators: true,
+    },
+  );
+  if (!updatedReview) {
+    return next(new AppError('No review found with that ID', 404));
+  }
+  res.status(201).json({
+    status: 'success',
+    data: {
+      updatedReview,
+    },
+  });
+});
+
+exports.deleteReview = catchAsync(async (req, res, next) => {
+  const deleteReview = await Review.findByIdAndDelete(req.params.id);
+
+  if (!deleteReview) {
+    return next(new AppError('No review found with that ID', 404));
+  }
+  res.status(204).json({
+    status: 'success',
+    data: null,
   });
 });
