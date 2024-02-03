@@ -25,14 +25,34 @@ const menuSchema = mongoose.Schema(
       },
       default: 0,
     },
-    description: { type: String, trim: true },
+    wineBottlePrice: Number,
+    wineDetailedCategory: {
+      type: String,
+      enum: {
+        values: ['SPARKLING', 'WHITE', 'ROSÉ', 'RED', 'DESSERTWINE'],
+        message:
+          'wineDetailedCategory is either SPARKLING, WHITE, ROSÉ, RED and DESSERTWINE',
+      },
+    },
+    description: { type: [String], trim: true },
     category: {
       type: String,
       required: [true, 'A menu item must have a category'],
       enum: {
-        values: ['Steak', 'Snacks', 'Main', 'Kids', 'Sweet', 'Craft Beer'],
+        values: [
+          'Steak',
+          'Sauce',
+          'Snacks',
+          'Main',
+          'Skewered',
+          'Ribs',
+          'Kids',
+          'Sweet',
+          'Craft Beer',
+          'Wine',
+        ],
         message:
-          'Category is either Steak, Snacks, Main, Sweet, Kids and Craft Beer',
+          'Category is either Steak, Sauce, Snacks, Main, Skewered, Ribs, Sweet, Kids, Craft Beer and Wine',
       },
     },
     image: { type: String },

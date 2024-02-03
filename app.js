@@ -18,12 +18,15 @@ const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 
 const app = express();
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 // 1) Global MiddleWare
 // Set security HTTP headers
-app.use(helmet());
+app.use(helmet({ crossOriginResourcePolicy: false }));
+
+// Set "public" as static resources
+app.use('/static', express.static('public'));
 
 // Development logging
 if (process.env.NODE_ENV === 'development') {

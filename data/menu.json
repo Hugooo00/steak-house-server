@@ -1,10 +1,17 @@
 [
   {
     "name": "Classic Ribeye Steak",
-    "price": 35,
+    "price": 40,
     "discount": 5,
     "ratingsAverage": 9,
-    "description": "A juicy ribeye steak seasoned with salt, pepper, and a hint of garlic.",
+    "description": [
+      "A juicy ribeye steak seasoned with salt, pepper, and a hint of garlic.",
+      "300g",
+      "Recommended for: 1 people",
+      "Angus beef from the USA",
+      "Grass-fed, 150 days",
+      "Sides: Fries and salad"
+    ],
     "category": "Steak",
     "image": "steak-1.jpg",
     "status": "Available"
@@ -14,7 +21,14 @@
     "price": 55,
     "discount": 5,
     "ratingsAverage": 9.5,
-    "description": "Tender New York strip steak with a rich, beefy flavor, grilled to perfection.",
+    "description": [
+      "Tender New York strip steak with a rich, beefy flavor, grilled to perfection.",
+      "350g",
+      "Recommended for: 1 people",
+      "Black Angus beef from Australia",
+      "Grain-fed, 120 days",
+      "Sides: Baked potatoes and green beans"
+    ],
     "category": "Steak",
     "image": "steak-2.jpg",
     "status": "Available"
@@ -24,7 +38,14 @@
     "price": 60,
     "discount": 5,
     "ratingsAverage": 9.5,
-    "description": "Succulent filet mignon, known for its tenderness and delicate texture.",
+    "description": [
+      "Succulent filet mignon, known for its tenderness and delicate texture.",
+      "250g",
+      "Recommended for: 1 people",
+      "Wagyu beef from Japan",
+      "Grass-fed, 200 days",
+      "Sides: Mashed potatoes and asparagus"
+    ],
     "category": "Steak",
     "image": "steak-3.jpg",
     "status": "Sold out"
@@ -32,7 +53,14 @@
   {
     "name": "T-Bone Steak",
     "price": 70,
-    "description": "A classic T-bone steak combining the rich taste of a strip with the tenderness of a filet.",
+    "description": [
+      "A classic T-bone steak combining the rich taste of a strip with the tenderness of a filet.",
+      "900g",
+      "Recommended for: 2-3 people",
+      "Angus beef from Argentina",
+      "Grain-fed, 100 days",
+      "Sides: Roasted vegetables and coleslaw"
+    ],
     "category": "Steak",
     "image": "steak-4.jpg",
     "status": "Available"
@@ -40,7 +68,14 @@
   {
     "name": "Sirloin Steak",
     "price": 30,
-    "description": "Lean and flavorful sirloin steak, best served medium-rare.",
+    "description": [
+      "Lean and flavorful sirloin steak, best served medium-rare.",
+      "300g",
+      "Recommended for: 1 people",
+      "Hereford beef from the UK",
+      "Grass-fed, 180 days",
+      "Sides: Sweet potato fries and mixed salad"
+    ],
     "category": "Steak",
     "image": "steak-5.jpg",
     "status": "Available"
@@ -48,7 +83,14 @@
   {
     "name": "Porterhouse Steak",
     "price": 80,
-    "description": "A larger version of the T-bone, with more of the tender filet.",
+    "description": [
+      "A larger version of the T-bone, with more of the tender filet.",
+      "1000g",
+      "Recommended for: 2-3 people",
+      "Angus beef from Ireland",
+      "Grain-fed, 90 days",
+      "Sides: Garlic bread and Caesar salad"
+    ],
     "category": "Steak",
     "image": "steak-6.jpg",
     "status": "Available"
@@ -56,7 +98,14 @@
   {
     "name": "Tomahawk Steak",
     "price": 110,
-    "description": "A long-bone ribeye steak, rich in flavor and perfect for grilling.",
+    "description": [
+      "Signature Tomahawk Steak with rich marbling and a distinctive long bone, grilled to perfection.",
+      "1200g",
+      "Recommended for: 2-3 people",
+      "Angus beef from the USA",
+      "Grass-fed, 160 days",
+      "Sides: Loaded fries and spinach salad"
+    ],
     "category": "Steak",
     "image": "steak-7.jpg",
     "status": "Available"
@@ -64,15 +113,172 @@
   {
     "name": "Beef Wellington",
     "price": 100,
-    "description": "A savory preparation of tenderloin encased in puff pastry with mushroom duxelles.",
+    "description": [
+      "A savory preparation of tenderloin encased in puff pastry with mushroom duxelles.",
+      "700g",
+      "Recommended for: 2 people",
+      "Wagyu beef from Japan",
+      "Grain-fed, 180 days",
+      "Sides: Truffle fries and roasted Brussels sprouts"
+    ],
     "category": "Steak",
     "image": "steak-8.jpg",
     "status": "Available"
   },
   {
+    "name": "Classic Chicken Skewers",
+    "price": 38,
+    "description": ["Juicy grilled chicken, seasoned with herbs and spices."],
+    "category": "Skewered",
+    "image": "skewered-1.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Beef Tenderloin Skewers",
+    "price": 55,
+    "description": ["Tender beef cubes, marinated and grilled to perfection."],
+    "category": "Skewered",
+    "image": "skewered-2.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Spicy Lamb Skewers",
+    "price": 50,
+    "description": ["Spicy lamb skewers with a zesty marinade."],
+    "category": "Skewered",
+    "image": "skewered-3.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Mixed Vegetable Skewers",
+    "price": 43,
+    "description": ["A colorful assortment of grilled vegetables."],
+    "category": "Skewered",
+    "image": "skewered-4.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Shrimp Skewers",
+    "price": 60,
+    "description": ["Grilled shrimp, seasoned with garlic and lemon."],
+    "category": "Skewered",
+    "image": "skewered-5.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Pork Belly Skewers",
+    "price": 45,
+    "description": ["Crispy pork belly, glazed with a sweet and savory sauce."],
+    "category": "Skewered",
+    "image": "skewered-6.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Classic BBQ Ribs",
+    "price": 55,
+    "description": [
+      "Slow-cooked ribs basted in our homemade BBQ sauce for a savory, smokey flavor.",
+      "1.2kg",
+      "Smokey BBQ",
+      "Signature BBQ sauce"
+    ],
+    "category": "Ribs",
+    "image": "rib-1.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Honey Glazed Pork Ribs",
+    "price": 60,
+    "description": [
+      "Juicy pork ribs glazed with sweet honey and a touch of garlic, roasted to a perfect char.",
+      "1kg",
+      "Sweet Honey",
+      "Honey and Garlic sauce"
+    ],
+    "category": "Ribs",
+    "image": "rib-2.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Spicy Korean Ribs",
+    "price": 58,
+    "description": [
+      "Pork ribs marinated in a spicy Gochujang sauce, offering a bold, Korean flavor.",
+      "800g",
+      "Spicy Gochujang",
+      "Korean Gochujang sauce"
+    ],
+    "category": "Ribs",
+    "image": "rib-3.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Smoked Beef Ribs",
+    "price": 65,
+    "description": [
+      "Beef ribs slowly smoked over hickory, infusing them with a deep, rich smoky essence.",
+      "1.5kg",
+      "Smokey Beef",
+      "Smoked Hickory sauce"
+    ],
+    "category": "Ribs",
+    "image": "rib-4.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Sticky Maple Ribs",
+    "price": 57,
+    "description": [
+      "Tender ribs coated in a sticky maple and bourbon sauce, offering a sweet and complex flavor.",
+      "1kg",
+      "Sweet Maple",
+      "Maple and Bourbon sauce"
+    ],
+    "category": "Ribs",
+    "image": "rib-5.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Peppercorn",
+    "price": 5,
+    "category": "Sauce",
+    "image": "sauce-1.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Peri Peri",
+    "price": 5,
+    "category": "Sauce",
+    "image": "sauce-2.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Mushroom",
+    "price": 5,
+    "category": "Sauce",
+    "image": "sauce-3.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Chilli Sauce",
+    "price": 5,
+    "category": "Sauce",
+    "image": "sauce-4.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Creamy Garlic",
+    "price": 5,
+    "category": "Sauce",
+    "image": "sauce-6.jpg",
+    "status": "Available"
+  },
+  {
     "name": "Caesar Salad",
     "price": 23,
-    "description": "Crisp romaine lettuce with creamy Caesar dressing, croutons, and Parmesan cheese.",
+    "description": [
+      "Crisp romaine lettuce with creamy Caesar dressing, croutons, and Parmesan cheese."
+    ],
     "category": "Snacks",
     "image": "snack-1.jpg",
     "status": "Available"
@@ -80,7 +286,9 @@
   {
     "name": "Caprese Salad",
     "price": 23,
-    "description": "Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.",
+    "description": [
+      "Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze."
+    ],
     "category": "Snacks",
     "image": "snack-2.jpg",
     "status": "Available"
@@ -88,7 +296,9 @@
   {
     "name": "Bruschetta",
     "price": 15,
-    "description": "Toasted bread topped with fresh tomatoes, basil, garlic, and olive oil.",
+    "description": [
+      "Toasted bread topped with fresh tomatoes, basil, garlic, and olive oil."
+    ],
     "category": "Snacks",
     "image": "snack-3.jpg",
     "status": "Available"
@@ -96,7 +306,7 @@
   {
     "name": "Garlic Bread",
     "price": 13,
-    "description": "Crispy bread with buttery garlic spread.",
+    "description": ["Crispy bread with buttery garlic spread."],
     "category": "Snacks",
     "image": "snack-4.jpg",
     "status": "Available"
@@ -104,7 +314,7 @@
   {
     "name": "Chicken Wings",
     "price": 22,
-    "description": "Crispy chicken wings with a choice of sauces.",
+    "description": ["Crispy chicken wings with a choice of sauces."],
     "category": "Snacks",
     "image": "snack-5.jpg",
     "status": "Available"
@@ -112,7 +322,7 @@
   {
     "name": "Cheese Platter",
     "price": 22,
-    "description": "An assortment of fine cheeses served with crackers.",
+    "description": ["An assortment of fine cheeses served with crackers."],
     "category": "Snacks",
     "image": "snack-6.jpg",
     "status": "Available"
@@ -120,7 +330,7 @@
   {
     "name": "Grilled Salmon",
     "price": 38,
-    "description": "Fresh salmon fillet grilled with lemon and herbs.",
+    "description": ["Fresh salmon fillet grilled with lemon and herbs."],
     "category": "Main",
     "image": "main-1.jpg",
     "status": "Available"
@@ -129,7 +339,7 @@
     "name": "Lamb Chops",
     "price": 46,
     "discount": 6,
-    "description": "Tender lamb chops with a rosemary and garlic marinade.",
+    "description": ["Tender lamb chops with a rosemary and garlic marinade."],
     "category": "Main",
     "image": "main-2.jpg",
     "status": "Sold out"
@@ -137,7 +347,9 @@
   {
     "name": "Chicken Alfredo Pasta",
     "price": 27,
-    "description": "Creamy Alfredo sauce over fettuccine with grilled chicken.",
+    "description": [
+      "Creamy Alfredo sauce over fettuccine with grilled chicken."
+    ],
     "category": "Main",
     "image": "main-3.jpg",
     "status": "Available"
@@ -145,7 +357,7 @@
   {
     "name": "Lobster Risotto",
     "price": 38,
-    "description": "Creamy risotto with succulent pieces of lobster.",
+    "description": ["Creamy risotto with succulent pieces of lobster."],
     "category": "Main",
     "image": "main-4.jpg",
     "status": "Available"
@@ -153,7 +365,7 @@
   {
     "name": "Seafood Paella",
     "price": 35,
-    "description": "Traditional Spanish rice dish with a variety of seafood.",
+    "description": ["Traditional Spanish rice dish with a variety of seafood."],
     "category": "Main",
     "image": "main-5.jpg",
     "status": "Available"
@@ -162,7 +374,9 @@
     "name": "Chocolate Lava Cake",
     "price": 22,
     "discount": 3,
-    "description": "Warm chocolate cake with a gooey center, served with vanilla ice cream.",
+    "description": [
+      "Warm chocolate cake with a gooey center, served with vanilla ice cream."
+    ],
     "category": "Sweet",
     "image": "sweet-1.jpg",
     "status": "Available"
@@ -170,7 +384,9 @@
   {
     "name": "Tiramisu",
     "price": 23,
-    "description": "Coffee-flavored Italian dessert with layers of ladyfingers and mascarpone cheese.",
+    "description": [
+      "Coffee-flavored Italian dessert with layers of ladyfingers and mascarpone cheese."
+    ],
     "category": "Sweet",
     "image": "sweet-2.jpg",
     "status": "Available"
@@ -178,7 +394,9 @@
   {
     "name": "Cheesecake",
     "price": 20,
-    "description": "Creamy cheesecake with a graham cracker crust, topped with fresh berries.",
+    "description": [
+      "Creamy cheesecake with a graham cracker crust, topped with fresh berries."
+    ],
     "category": "Sweet",
     "image": "sweet-3.jpg",
     "status": "Available"
@@ -186,7 +404,7 @@
   {
     "name": "Apple Pie",
     "price": 32,
-    "description": "Traditional apple pie with a flaky crust, served warm.",
+    "description": ["Traditional apple pie with a flaky crust, served warm."],
     "category": "Sweet",
     "image": "sweet-4.jpg",
     "status": "Available"
@@ -194,7 +412,7 @@
   {
     "name": "Mini Cheeseburgers",
     "price": 15,
-    "description": "Kid-sized burgers with cheese on a small bun.",
+    "description": ["Kid-sized burgers with cheese on a small bun."],
     "category": "Kids",
     "image": "kid-1.jpg",
     "status": "Available"
@@ -202,7 +420,7 @@
   {
     "name": "Chicken Tenders",
     "price": 13,
-    "description": "Crispy chicken tenders served with dipping sauces.",
+    "description": ["Crispy chicken tenders served with dipping sauces."],
     "category": "Kids",
     "image": "kid-2.jpg",
     "status": "Available"
@@ -210,7 +428,9 @@
   {
     "name": "Fish & Chips",
     "price": 14,
-    "description": "Golden-battered fish paired with classic, thick-cut fries, served with tartar sauce.",
+    "description": [
+      "Golden-battered fish paired with classic, thick-cut fries, served with tartar sauce."
+    ],
     "category": "Kids",
     "image": "kid-3.jpg",
     "status": "Available"
@@ -218,57 +438,665 @@
   {
     "name": "Milk Stout",
     "price": 16,
-    "description": "Rich and creamy with notes of chocolate and coffee, complemented by a smooth, sweet finish.",
+    "description": [
+      "Dive into the depth of Milk Stout, where the rich tapestry of flavors weaves together notes of luxurious chocolate and bold coffee. Each sip brings forth a creamy texture, reminiscent of a velvety dessert, perfectly complemented by a sweet, smooth finish that lingers on the palate.",
+      "Ingredients: Roasted barley, Chocolate malt, Coffee beans",
+      "Alcohol by volume (ABV): 6.0%",
+      "Original Gravity: 14° Plato"
+    ],
     "category": "Craft Beer",
-    "image": "craftBeer-1.jpg",
+    "image": "static/img/beer/craftBeer-1.jpg",
     "status": "Available"
   },
   {
     "name": "Hoppy IPA",
     "price": 13,
-    "description": "A bold, hoppy IPA with citrus and pine aromas, offering a crisp and refreshing bitterness.",
+    "description": [
+      "Embrace the vibrant essence of Hoppy IPA, a symphony of bold hops characterized by its citrus and pine aromas. This IPA delivers a robust hoppy punch, balanced by a crisp and refreshing bitterness that invigorates the senses, making each gulp a refreshing adventure.",
+      "Ingredients: Citra hops, Pine hops, Pale malt",
+      "Alcohol by volume (ABV): 7.2%",
+      "Original Gravity: 13° Plato"
+    ],
     "category": "Craft Beer",
-    "image": "craftBeer-2.jpg",
+    "image": "static/img/beer/craftBeer-2.jpg",
     "status": "Available"
   },
   {
     "name": "Amber Ale",
     "price": 12,
-    "description": "Smooth and malty with a balanced caramel sweetness and a hint of roasted flavor.",
+    "description": [
+      "Savor the harmonious blend of smooth and malty flavors with Amber Ale, featuring a balanced caramel sweetness that caresses the taste buds. Subtle hints of roasted flavors add complexity to this ale, creating a satisfying malty backbone with a touch of elegance.",
+      "Ingredients: Caramel malt, Amber malt, Cascade hops",
+      "Alcohol by volume (ABV): 5.5%",
+      "Original Gravity: 12° Plato"
+    ],
     "category": "Craft Beer",
-    "image": "craftBeer-3.jpg",
+    "image": "static/img/beer/craftBeer-3.jpg",
     "status": "Available"
   },
   {
     "name": "Sour Cherry Ale",
     "price": 14,
-    "description": "Tart and fruity, this ale offers a vibrant cherry flavor with a pleasantly sour finish.",
+    "description": [
+      "Experience the tart and fruity explosion of Sour Cherry Ale, where each sip offers a lively burst of vibrant cherry flavor. This ale masterfully combines a zesty sourness with the sweetness of ripe cherries, resulting in a refreshingly unique finish that tantalizes the palate.",
+      "Ingredients: Cherry puree, Wheat malt, Lactobacillus",
+      "Alcohol by volume (ABV): 5.8%",
+      "Original Gravity: 11° Plato"
+    ],
     "category": "Craft Beer",
-    "image": "craftBeer-4.jpg",
+    "image": "static/img/beer/craftBeer-4.jpg",
     "status": "Available"
   },
   {
     "name": "Dark Porter",
     "price": 15,
-    "description": "Rich in dark chocolate and roasted coffee notes, this porter is both robust and smooth.",
+    "description": [
+      "Indulge in the rich and complex flavors of Dark Porter, an ode to the intricate notes of dark chocolate and roasted coffee. This robust porter is both bold and smooth, offering a sensory journey through its dark, malty landscape, culminating in a satisfyingly rich experience.",
+      "Ingredients: Chocolate malt, Coffee malt, Nugget hops",
+      "Alcohol by volume (ABV): 6.3%",
+      "Original Gravity: 15° Plato"
+    ],
     "category": "Craft Beer",
-    "image": "craftBeer-5.jpg",
+    "image": "static/img/beer/craftBeer-5.jpg",
     "status": "Available"
   },
   {
     "name": "Golden Lager",
     "price": 12,
-    "description": "Bright and clean with a golden hue, offering a smooth, balanced malt flavor.",
+    "description": [
+      "Delight in the bright and clean taste of Golden Lager, where a golden hue meets a perfectly balanced malt flavor. This lager is the epitome of smoothness, offering a malt-forward profile that's complemented by a subtle hop character, making it the quintessential drink for any occasion.",
+      "Ingredients: Pilsner malt, Noble hops",
+      "Alcohol by volume (ABV): 4.8%",
+      "Original Gravity: 10° Plato"
+    ],
     "category": "Craft Beer",
-    "image": "craftBeer-6.jpg",
+    "image": "static/img/beer/craftBeer-6.jpg",
     "status": "Available"
   },
   {
     "name": "Crisp Pilsner",
     "price": 12,
-    "description": "A classic Pilsner with a refreshing, crisp profile, balanced by light hop bitterness.",
+    "description": [
+      "Refresh your senses with Crisp Pilsner, a classic embodiment of the pilsner style, characterized by its refreshing, crisp profile. Light hop bitterness dances with a clean malt base, offering a beer that's both invigorating and balanced, perfect for savoring on a warm, sunny day.",
+      "Ingredients: Saaz hops, Vienna malt",
+      "Alcohol by volume (ABV): 4.9%",
+      "Original Gravity: 11° Plato"
+    ],
     "category": "Craft Beer",
-    "image": "craftBeer-7.jpg",
+    "image": "static/img/beer/craftBeer-7.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Farmhouse Saison",
+    "price": 16,
+    "description": [
+      "Embark on a journey with Farmhouse Saison, an artisanal ale that captures the essence of the French countryside. This saison is a celebration of rustic flavors, featuring a delicate balance of fruity esters and spicy phenols, all wrapped in a bubbly, effervescent package that's as refreshing as it is complex.",
+      "Ingredients: Belgian yeast, Peppercorns, Orange peel",
+      "Alcohol by volume (ABV): 7.5%",
+      "Original Gravity: 16° Plato"
+    ],
+    "category": "Craft Beer",
+    "image": "static/img/beer/craftBeer-8.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Celestial Spark",
+    "price": 14,
+    "wineBottlePrice": 85,
+    "wineDetailedCategory": "SPARKLING",
+    "description": ["Crisp apple, pear essence", "France", "Champagne", "2020"],
+    "category": "Wine",
+    "image": "wine-1.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Aurora Bubbles",
+    "price": 15,
+    "wineBottlePrice": 90,
+    "wineDetailedCategory": "SPARKLING",
+    "description": [
+      "Bright citrus, floral notes",
+      "Australia",
+      "Tasmania",
+      "2021"
+    ],
+    "category": "Wine",
+    "image": "wine-2.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Twilight Effervescence",
+    "price": 16,
+    "wineBottlePrice": 95,
+    "wineDetailedCategory": "SPARKLING",
+    "description": ["Green apple, brioche", "France", "Loire Valley", "2019"],
+    "category": "Wine",
+    "image": "wine-3.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Dawn's Spark",
+    "price": 17,
+    "wineBottlePrice": 100,
+    "wineDetailedCategory": "SPARKLING",
+    "description": [
+      "Lemon zest, almond",
+      "Australia",
+      "Adelaide Hills, SA",
+      "2022"
+    ],
+    "category": "Wine",
+    "image": "wine-4.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Etoile Fizz",
+    "price": 18,
+    "wineBottlePrice": 105,
+    "wineDetailedCategory": "SPARKLING",
+    "description": ["White peach, hazelnut", "France", "Burgundy", "2020"],
+    "category": "Wine",
+    "image": "wine-5.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Opaline Mousse",
+    "price": 19,
+    "wineBottlePrice": 110,
+    "wineDetailedCategory": "SPARKLING",
+    "description": [
+      "Pear, quince, toasty finish",
+      "Australia",
+      "Yarra Valley, VIC",
+      "2021"
+    ],
+    "category": "Wine",
+    "image": "wine-6.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Lunar Gleam",
+    "price": 12,
+    "wineBottlePrice": 70,
+    "wineDetailedCategory": "WHITE",
+    "description": ["Lemon curd, white flower", "France", "Alsace", "2022"],
+    "category": "Wine",
+    "image": "wine-7.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Ocean Whisper",
+    "price": 13,
+    "wineBottlePrice": 75,
+    "wineDetailedCategory": "WHITE",
+    "description": [
+      "Green apple, oyster shell",
+      "Australia",
+      "Margaret River, WA",
+      "2020"
+    ],
+    "category": "Wine",
+    "image": "wine-8.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Sunlit Chardonnay",
+    "price": 14,
+    "wineBottlePrice": 80,
+    "wineDetailedCategory": "WHITE",
+    "description": ["Tropical fruit, vanilla", "France", "Burgundy", "2021"],
+    "category": "Wine",
+    "image": "wine-9.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Crisp Dawn",
+    "price": 15,
+    "wineBottlePrice": 85,
+    "wineDetailedCategory": "WHITE",
+    "description": [
+      "Citrus zest, flinty mineral",
+      "Australia",
+      "Clare Valley, SA",
+      "2019"
+    ],
+    "category": "Wine",
+    "image": "wine-10.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Pearl of the Vines",
+    "price": 13,
+    "wineBottlePrice": 78,
+    "wineDetailedCategory": "WHITE",
+    "description": ["Lime zest, green apple", "France", "Loire Valley", "2021"],
+    "category": "Wine",
+    "image": "wine-11.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Riviera Breeze",
+    "price": 14,
+    "wineBottlePrice": 82,
+    "wineDetailedCategory": "WHITE",
+    "description": [
+      "Citrus blossom, peach",
+      "Australia",
+      "Eden Valley, SA",
+      "2022"
+    ],
+    "category": "Wine",
+    "image": "wine-12.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Alpine Sun",
+    "price": 15,
+    "wineBottlePrice": 85,
+    "wineDetailedCategory": "WHITE",
+    "description": [
+      "Crisp pear, floral undertones",
+      "France",
+      "Alsace",
+      "2020"
+    ],
+    "category": "Wine",
+    "image": "wine-13.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Azure Coast",
+    "price": 16,
+    "wineBottlePrice": 88,
+    "wineDetailedCategory": "WHITE",
+    "description": [
+      "Green melon, minerality",
+      "Australia",
+      "Margaret River, WA",
+      "2019"
+    ],
+    "category": "Wine",
+    "image": "wine-14.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Morning Dew",
+    "price": 12,
+    "wineBottlePrice": 76,
+    "wineDetailedCategory": "WHITE",
+    "description": ["Apple blossom, citrus", "France", "Burgundy", "2021"],
+    "category": "Wine",
+    "image": "wine-15.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Harbor Mist",
+    "price": 14,
+    "wineBottlePrice": 80,
+    "wineDetailedCategory": "WHITE",
+    "description": [
+      "Tropical fruits, crisp finish",
+      "Australia",
+      "Yarra Valley, VIC",
+      "2022"
+    ],
+    "category": "Wine",
+    "image": "wine-16.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Blush of Dusk",
+    "price": 11,
+    "wineBottlePrice": 65,
+    "wineDetailedCategory": "ROSÉ",
+    "description": ["Strawberry, rose petal", "France", "Provence", "2020"],
+    "category": "Wine",
+    "image": "wine-17.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Sunset Sigh",
+    "price": 12,
+    "wineBottlePrice": 70,
+    "wineDetailedCategory": "ROSÉ",
+    "description": ["Watermelon, lavender", "Australia", "Barossa, SA", "2021"],
+    "category": "Wine",
+    "image": "wine-18.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Coral Whisper",
+    "price": 13,
+    "wineBottlePrice": 70,
+    "wineDetailedCategory": "ROSÉ",
+    "description": ["Watermelon, lavender", "France", "Languedoc", "2019"],
+    "category": "Wine",
+    "image": "wine-19.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Rosy Gleam",
+    "price": 14,
+    "wineBottlePrice": 72,
+    "wineDetailedCategory": "ROSÉ",
+    "description": [
+      "Cherry, rose petal",
+      "Australia",
+      "Barossa Valley, SA",
+      "2022"
+    ],
+    "category": "Wine",
+    "image": "wine-20.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Twilight Blush",
+    "price": 15,
+    "wineBottlePrice": 75,
+    "wineDetailedCategory": "ROSÉ",
+    "description": ["Peach, hint of spice", "France", "Rhône Valley", "2021"],
+    "category": "Wine",
+    "image": "wine-21.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Velvet Shadow",
+    "price": 16,
+    "wineBottlePrice": 125,
+    "wineDetailedCategory": "RED",
+    "description": ["Blackcurrant, cedar wood", "France", "Bordeaux", "2018"],
+    "category": "Wine",
+    "image": "wine-22.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Margaret's Heart",
+    "price": 18,
+    "wineBottlePrice": 110,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Dark cherry, chocolate",
+      "Australia",
+      "Margaret River, WA",
+      "2019"
+    ],
+    "category": "Wine",
+    "image": "wine-23.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Crimson Tide",
+    "price": 14,
+    "wineBottlePrice": 95,
+    "wineDetailedCategory": "RED",
+    "description": ["Ripe plum, subtle oak", "France", "Languedoc", "2020"],
+    "category": "Wine",
+    "image": "wine-24.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Barossa Embrace",
+    "price": 20,
+    "wineBottlePrice": 130,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Blackberry, vanilla spice",
+      "Australia",
+      "Barossa Valley, SA",
+      "2018"
+    ],
+    "category": "Wine",
+    "image": "wine-25.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Burgundy Velvet",
+    "price": 22,
+    "wineBottlePrice": 140,
+    "wineDetailedCategory": "RED",
+    "description": ["Cherry, earthy undertones", "France", "Burgundy", "2019"],
+    "category": "Wine",
+    "image": "wine-26.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Hunter's Moon",
+    "price": 15,
+    "wineBottlePrice": 100,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Currant, tobacco leaf",
+      "Australia",
+      "Hunter Valley, NSW",
+      "2021"
+    ],
+    "category": "Wine",
+    "image": "wine-27.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Rhone Whisper",
+    "price": 17,
+    "wineBottlePrice": 105,
+    "wineDetailedCategory": "RED",
+    "description": ["Spice, black olive", "France", "Rhône Valley", "2020"],
+    "category": "Wine",
+    "image": "wine-28.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Coonawarra Essence",
+    "price": 19,
+    "wineBottlePrice": 115,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Mint, dark chocolate",
+      "Australia",
+      "Coonawarra, SA",
+      "2019"
+    ],
+    "category": "Wine",
+    "image": "wine-29.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Loire Legacy",
+    "price": 13,
+    "wineBottlePrice": 85,
+    "wineDetailedCategory": "RED",
+    "description": ["Raspberry, pepper", "France", "Loire Valley", "2021"],
+    "category": "Wine",
+    "image": "wine-30.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Yarra Valley Harvest",
+    "price": 18,
+    "wineBottlePrice": 110,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Strawberry, hint of earth",
+      "Australia",
+      "Yarra Valley, VIC",
+      "2020"
+    ],
+    "category": "Wine",
+    "image": "wine-31.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Provence Passion",
+    "price": 20,
+    "wineBottlePrice": 120,
+    "wineDetailedCategory": "RED",
+    "description": ["Black cherry, floral notes", "France", "Provence", "2021"],
+    "category": "Wine",
+    "image": "wine-32.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Tasmanian Twilight",
+    "price": 14,
+    "wineBottlePrice": 88,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Red currant, smooth finish",
+      "Australia",
+      "Tasmania",
+      "2019"
+    ],
+    "category": "Wine",
+    "image": "wine-33.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Alpine Glow",
+    "price": 16,
+    "wineBottlePrice": 98,
+    "wineDetailedCategory": "RED",
+    "description": ["Violet, leather", "France", "Alps", "2018"],
+    "category": "Wine",
+    "image": "wine-34.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Margaret River Mystique",
+    "price": 22,
+    "wineBottlePrice": 135,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Cassis, cedar, silky tannins",
+      "Australia",
+      "Margaret River, WA",
+      "2020"
+    ],
+    "category": "Wine",
+    "image": "wine-35.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Bordeaux Beacon",
+    "price": 18,
+    "wineBottlePrice": 112,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Plum, clove, elegant finish",
+      "France",
+      "Bordeaux",
+      "2022"
+    ],
+    "category": "Wine",
+    "image": "wine-36.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Adelaide Ambiance",
+    "price": 15,
+    "wineBottlePrice": 90,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Mulberry, spice box",
+      "Australia",
+      "Adelaide Hills, SA",
+      "2021"
+    ],
+    "category": "Wine",
+    "image": "wine-37.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Champagne Charm",
+    "price": 17,
+    "wineBottlePrice": 105,
+    "wineDetailedCategory": "RED",
+    "description": ["Strawberry, brioche", "France", "Champagne", "2019"],
+    "category": "Wine",
+    "image": "wine-38.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Clare Valley Call",
+    "price": 19,
+    "wineBottlePrice": 117,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Black fruit, eucalyptus",
+      "Australia",
+      "Clare Valley, SA",
+      "2020"
+    ],
+    "category": "Wine",
+    "image": "wine-39.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Languedoc Legacy",
+    "price": 14,
+    "wineBottlePrice": 86,
+    "wineDetailedCategory": "RED",
+    "description": ["Cherry, thyme", "France", "Languedoc", "2021"],
+    "category": "Wine",
+    "image": "wine-40.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Perthshire Promise",
+    "price": 21,
+    "wineBottlePrice": 128,
+    "wineDetailedCategory": "RED",
+    "description": [
+      "Ripe plum, tobacco",
+      "Australia",
+      "Perth Hills, WA",
+      "2018"
+    ],
+    "category": "Wine",
+    "image": "wine-41.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Golden Elixir",
+    "price": 20,
+    "wineBottlePrice": 140,
+    "wineDetailedCategory": "DESSERTWINE",
+    "description": [
+      "Apricot, honey, vibrant acidity",
+      "France",
+      "Sauternes",
+      "2017"
+    ],
+    "category": "Wine",
+    "image": "wine-42.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Twilight Rhapsody",
+    "price": 22,
+    "wineBottlePrice": 150,
+    "wineDetailedCategory": "DESSERTWINE",
+    "description": [
+      "Ripe peach, candied lemon",
+      "Australia",
+      "Barossa Valley, SA",
+      "2018"
+    ],
+    "category": "Wine",
+    "image": "wine-43.jpg",
+    "status": "Available"
+  },
+  {
+    "name": "Amber Symphony",
+    "price": 24,
+    "wineBottlePrice": 160,
+    "wineDetailedCategory": "DESSERTWINE",
+    "description": [
+      "Fig, walnut, caramel finish",
+      "France",
+      "Bordeaux",
+      "2019"
+    ],
+    "category": "Wine",
+    "image": "wine-44.jpg",
     "status": "Available"
   }
 ]
